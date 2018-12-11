@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Express Cinema</title>
+    <title>Express Cinema Movies</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 </head>
 
 <body>
-    <div class="header-wrapper">
-        <div class="text-wrapper">
-            <h1>Cinema <br>Ironhack</h1>
-            <a href="/movies"> Check the movies!</a>
-        </div>
-
+    <h1>Ironhack Cinema</h1>
+    <p> Click on the movie to check the showtimes</p>
+    {{#each movies}}
+    <div>
+        <img src="{{this.image}}" alt="">
+        <h4>{{this.title}}</h4>
+        <a href="/movie/{{this.id}}">See more</a>
     </div>
+    {{/each}}
 </body>
-
+</html>
